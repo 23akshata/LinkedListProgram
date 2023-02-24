@@ -15,8 +15,8 @@ namespace LinkedList
             while (true)
             {
                 Console.WriteLine("Enter the Number:");
-                Console.WriteLine("1.Add elements: \n 2.Display: \n 3.Add in Reverse \n 4.Append");
-                
+                Console.WriteLine("1.Add elements: \n 2.Display: \n 3.Add in Reverse \n 4.Append \n 5.Insert");
+            
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -40,11 +40,18 @@ namespace LinkedList
                         linkedList.Append(30);
                         linkedList.Append(70);
                         break;
-                    default:
+
+                    case 5:
+                        Console.Write("Enter Data to insert: ");
+                        int data = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Enter the posititon to insert: "); 
+                        int position = Convert.ToInt32(Console.ReadLine());
+                        linkedList.InsertPosition(position, data);
+                        break;
+                        default:
 
                         Console.WriteLine("type correct value");
-                        break;
-                       
+                        break;     
                 }
 
             }
