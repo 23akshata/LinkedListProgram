@@ -15,7 +15,7 @@ namespace LinkedList
             while (true)
             {
                 Console.WriteLine("Enter the Number:");
-                Console.WriteLine("1.Add elements: \n 2.Display: \n 3.Add in Reverse");
+                Console.WriteLine("1.Add elements: \n 2.Display: \n 3.Add in Reverse \n 4.Append");
                 
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -34,7 +34,13 @@ namespace LinkedList
                         linkedList.AddReverse(30);
                         linkedList.AddReverse(70);
                         break;
-                        default:
+
+                    case 4:
+                        linkedList.Append(56);
+                        linkedList.Append(30);
+                        linkedList.Append(70);
+                        break;
+                    default:
 
                         Console.WriteLine("type correct value");
                         break;
