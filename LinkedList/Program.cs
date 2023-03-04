@@ -25,6 +25,7 @@ namespace LinkedList
                         linkedList.Add(30);
                         linkedList.Add(70);
                         break;
+
                     case 2:
                         linkedList.Display();
                         break;
@@ -48,7 +49,20 @@ namespace LinkedList
                         int position = Convert.ToInt32(Console.ReadLine());
                         linkedList.InsertPosition(position, data);
                         break;
-                        default:
+
+                    case 6:
+                        Console.WriteLine("The first element deleted");
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveFirstNode();
+                        break;
+
+                    case 7:
+                        linkedList.AddFirst(20);
+                        linkedList.Display();
+                        break;
+                    default:
 
                         Console.WriteLine("type correct value");
                         break;     

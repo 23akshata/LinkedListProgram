@@ -10,6 +10,7 @@ namespace LinkedList
     internal class LinkedList 
     {
         public Node head;
+        public Node tail;
 
         public void Add(int data)
         {
@@ -105,7 +106,29 @@ namespace LinkedList
             {
                 Console.WriteLine("Enter Valid Position");
             }
-
+        }
+        public void RemoveFirstNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is Empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+                Console.WriteLine("The first element is deleted");
+            }
+        }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+                tail = head = newNode;
+            else
+            {
+                newNode.next = head;
+                head = newNode;
+            }
 
         }
     }
