@@ -140,6 +140,45 @@ namespace LinkedList
                 Console.WriteLine("the last element is deleted");
             }
         }
+        public void Find(int FindData)
+        {
+            int count = 0;
+            Node tempNode = this.head;
+            if (tempNode == null)
+                Console.WriteLine("Linke list is empty");
+            else
+            {
+                while (tempNode != null)
+                {
+                    if (tempNode.data.Equals(FindData))
+                    {
+                        count++;
+                    }
+                    tempNode = tempNode.next;
+                }
+            }
+            if (count > 0)
+                Console.WriteLine(FindData + " data found " + count + ": time ");
+            else
+                Console.WriteLine(" data not found\n");
+        }
+        public void Size()
+        {
+            int size = 0;
+            Node tempNode = this.head;
+            if (tempNode == null)
+                Console.WriteLine("Linke list is empty");
+            else
+            {
+                while (tempNode != null)
+                {
+                    tempNode = tempNode.next;
+                    size++;
+                }
+                Console.WriteLine("Size :" + size);
+            }
+        }
+
     }
 }
 
