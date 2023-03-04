@@ -119,20 +119,28 @@ namespace LinkedList
                 Console.WriteLine("The first element is deleted");
             }
         }
-        public void AddFirst(int data)
+        public void RemoveLastNode()
         {
-            Node newNode = new Node(data);
             if (head == null)
-                tail = head = newNode;
+            {
+                Console.WriteLine("lined list is empty");
+            }
+            if (head.next == null)
+            {
+                head = null;
+            }
             else
             {
-                newNode.next = head;
-                head = newNode;
+                Node laastNode = this.head;
+                while (laastNode.next.next != null)
+                {
+                    laastNode = laastNode.next;
+                }
+                laastNode.next = null;
+                Console.WriteLine("the last element is deleted");
             }
-
         }
     }
-
 }
 
 

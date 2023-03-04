@@ -59,8 +59,10 @@ namespace LinkedList
                         break;
 
                     case 7:
-                        linkedList.AddFirst(20);
-                        linkedList.Display();
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
                         break;
                     default:
 
